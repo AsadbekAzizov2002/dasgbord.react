@@ -12,11 +12,12 @@ function createData(name, calories, fat, carbs, protein) {
 }
 
 const rows = [
-  createData("Order", 159, 6.0, 24, 4.0),
-  createData("Ice cream sandwich", 237, 9.0, 37, 4.3),
-  createData("Eclair", 262, 16.0, 24, 6.0),
-  createData("Cupcake", 305, 3.7, 67, 4.3),
-  createData("Gingerbread", 356, 16.0, 49, 3.9),
+  createData("ORD-007", ` Ekaterina Tankova`, `(Mar 8 2024)`, 24),
+  createData("ORD-006", `Cao Yu`, `(Mar 8 2024)`, 37),
+  createData("ORD-004", `Alexa Richardson`, `(Mar 8 2024)`, 24),
+  createData("ORD-003", `Anje Keizer`, `(Mar 8 2024)`, 67),
+  createData("ORD-002", `Clarke Gillebert`, `(Mar 8 2024)`, 49),
+  createData("ORD-001", `Adam Denisov`, `(Mar 8 2024)`, 49),
 ];
 
 function Tables() {
@@ -31,9 +32,9 @@ function Tables() {
             <TableHead>
               <TableRow>
                 <TableCell>Order</TableCell>
-                <TableCell align="right">Calories</TableCell>
-                <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                <TableCell align="right">Carbs&nbsp;(g)</TableCell>
+                <TableCell align="right">Customer</TableCell>
+                <TableCell align="right">Date </TableCell>
+                <TableCell align="right">Status</TableCell>
                 {/* <TableCell align="right">Protein&nbsp;(g)</TableCell> */}
               </TableRow>
             </TableHead>
@@ -49,7 +50,7 @@ function Tables() {
                   <TableCell align="right">{row.calories}</TableCell>
                   <TableCell align="right">{row.fat}</TableCell>
                   <TableCell align="right">{row.carbs}</TableCell>
-                  <TableCell align="right">{row.protein}</TableCell>
+                  {/* <TableCell align="right">{row.protein}</TableCell> */}
                 </TableRow>
               ))}
             </TableBody>
